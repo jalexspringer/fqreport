@@ -117,4 +117,47 @@
         <li><span class="fqred">Volume:</span> The volume of traffic that the client wishes to buy.</li>
     </ul>
     </div>
+
+    <div class="row" >
+        <h4>Methodology</h4>
+        <p>Our methodology for scoring is based on two factors:</p>
+        <ol>
+            <li>The high-risk patterns we identify by analyzing various device metrics and for each conversion when the Forensiq tag fires or API is called.</li>
+            <li>The visitor's IP address, which we evalate against our Fraud Intelligence Database for high-risk patterns and past fraudulent activity.</li>
+        </ol>
+
+        <h4>Fraud Evaluation Criteria: Conversion Score</h4>
+    <table>
+        <thead class="fqheader">
+            <tr>
+                <th>Risk Ratio</th>
+                <th>Risk Level</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0-64</td>
+                <td class="low">Low</td>
+                <td>High quality impression traffic. Fraudulent activity may be
+                    due to false positives, which is less than 1% in organic traffic
+                    sources.</td>
+            </tr>
+            <tr>
+                <td>65-79</td>
+                <td class="elevated">Suspect</td>
+                <td>Fraudulent activity is not likely. Some fraudulent activity
+                    may occur at the impression level.</td>
+            </tr>
+            <tr>
+                <td>80-100</td>
+                <td class="high">High-Risk</td>
+                <td>Some fraudulent activity is likely, concentrated at the impres-
+                    sion level. Traffic mixing between human and non-human
+                    traffic sources is likely.</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
 {% endblock %}

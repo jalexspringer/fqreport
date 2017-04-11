@@ -735,11 +735,13 @@ th,
 td {
   padding: 10px 15px;
   text-align: left;
-  border-bottom: 1px solid #E1E1E1; }
+  border-bottom: 1px solid #E1E1E1;
+}
 
 th:first-child,
 td:first-child {
     padding-left: 2;
+    background-color: #F08080;
 }
 
 th:last-child,
@@ -749,7 +751,8 @@ td:last-child {
 tr:nth-child(even) {background-color: #f2f2f2}
 td:nth-child(1)  {white-space: nowrap; font-weight: 900}
 .fqheader {
-    color: #FF0000;
+    color: #FFFFFF;
+    background-color: #FF0000;
     white-space: nowrap;
 }
 
@@ -809,31 +812,6 @@ hr {
   display: table;
   clear: both; }
 
-
-/* Media Queries
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/*
-Note: The best way to structure the use of media queries is to create the queries
-near the relevant code. For example, if you wanted to change the styles for buttons
-on small devices, paste the mobile query code up in the buttons section and style it
-there.
-*/
-
-
-/* Larger than mobile */
-@media (min-width: 400px) {}
-
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
-
-/* Larger than tablet */
-@media (min-width: 750px) {}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {}
-
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {}
 
 /* Unique attributes */
 .fqred {

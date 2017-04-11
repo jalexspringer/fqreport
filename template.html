@@ -27,12 +27,8 @@
     </head>
     <body>
         <div class="container" >
-            <div class="row" >
-                <img src="images/logo.png" class="logo" width="350px" padding="10px" />
-                <h2>Analysis Report: <span class="fqred">{{ client }}</span></h2>
-                <hr>
-            </div>
-            <div class="row" >
+            {% include 'templates/intro.html' %}
+
                 <h3><b>Fraud Analysis</b></h3>
                 <h4>Overview</h4>
                 <p> We identified a total of <span class="fqred">{{ percentages.total }}</span> of all traffic as fraudulent. Scores in the high-risk or suspect ranges have been linked to lower quality traffic and can often be traced to fraudulent sources, sub sources, or domains.</p>
@@ -41,10 +37,10 @@
         <div class="container">
             <div class="row">
                 <div class="one-half column">
-                    <img class="chart" src="{{ client }}Gauge.png" />
+                    <img class="chart" src="images/{{ client }}Gauge.png" />
                 </div>
                 <div class="one-half column">
-                    <img  class="chart" src="{{ client }}.png" />
+                    <img  class="chart" src="images/{{ client }}.png" />
                 </div>
             </div>
         </div>

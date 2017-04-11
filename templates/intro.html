@@ -1,0 +1,47 @@
+{% block intro %}
+
+<div class="row" >
+    <img src="images/logo.png" class="logo" width="350px" padding="10px" />
+    <h1>Analysis Report: <span class="fqred">{{ client }}</span></h1>
+    <hr>
+</div>
+
+<div class="row" >
+    <h2>Introduction</h2>
+    <p>Forensiq is a fraud detection platform that provides solutions for Digital, Performance, and CPI Advertising clients – this analysis is focused on Digital Advertising fraud. Integration was performed via Forensiq’s {{ implementationTech }}, with aggregation performed on the following inputs:</p>
+</div>
+
+<div class="row" >
+<table>
+    <thead>
+        <tr>
+            <th class="fqheader">Parameter</th>
+            <th class="fqheader">Description</th>
+            <th class="fqheader">{{ client }} Input</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Source</td>
+            <td>The ID assigned to traffic sources/publishers.</td>
+            <td>{{ input.source }}</td>
+        </tr>
+        <tr>
+            <td>Sub Source</td>
+            <td>The ID assigned to traffic sub sources/publishers.</td>
+            <td>{{ input.subsource}}</td>
+        </tr>
+        <tr>
+            <td>Campaign</td>
+            <td>The ID that identifies campaigns or placements.</td>
+            <td>{{ input.campaign }}</td>
+        </tr>
+        <tr>
+            <td>Domain</td>
+            <td>Domain driving traffic.</td>
+            <td>{{ input.domain }}</td>
+        </tr>
+    </tbody>
+</table>
+
+{% endblock %}

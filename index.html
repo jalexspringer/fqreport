@@ -27,12 +27,54 @@
     </head>
     <body>
         <div class="container" >
-            <div class="row" >
-                <img src="images/logo.png" class="logo" width="350px" padding="10px" />
-                <h2>Analysis Report: <span class="fqred">Example Client</span></h2>
-                <hr>
-            </div>
-            <div class="row" >
+            <!-- 
+
+<div class="row" >
+    <img src="images/logo.png" class="logo" width="350px" padding="10px" />
+    <h1>Analysis Report: <span class="fqred">Example Client</span></h1>
+    <hr>
+</div>
+
+<div class="row" >
+    <h2>Introduction</h2>
+    <p>Forensiq is a fraud detection platform that provides solutions for Digital, Performance, and CPI Advertising clients – this analysis is focused on Digital Advertising fraud. Integration was performed via Forensiq’s JS Tag, with aggregation performed on the following inputs:</p>
+</div>
+
+<div class="row" >
+<table>
+    <thead>
+        <tr>
+            <th class="fqheader">Parameter</th>
+            <th class="fqheader">Description</th>
+            <th class="fqheader">Example Client Input</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Source</td>
+            <td>The ID assigned to traffic sources/publishers.</td>
+            <td>Network</td>
+        </tr>
+        <tr>
+            <td>Sub Source</td>
+            <td>The ID assigned to traffic sub sources/publishers.</td>
+            <td>Publisher</td>
+        </tr>
+        <tr>
+            <td>Campaign</td>
+            <td>The ID that identifies campaigns or placements.</td>
+            <td>Campaign ID</td>
+        </tr>
+        <tr>
+            <td>Domain</td>
+            <td>Domain driving traffic.</td>
+            <td>Page URL</td>
+        </tr>
+    </tbody>
+</table>
+
+ -->
+
                 <h3><b>Fraud Analysis</b></h3>
                 <h4>Overview</h4>
                 <p> We identified a total of <span class="fqred">25.25</span> of all traffic as fraudulent. Scores in the high-risk or suspect ranges have been linked to lower quality traffic and can often be traced to fraudulent sources, sub sources, or domains.</p>
@@ -41,10 +83,10 @@
         <div class="container">
             <div class="row">
                 <div class="one-half column">
-                    <img class="chart" src="Example ClientGauge.png" />
+                    <img class="chart" src="images/Example ClientGauge.png" />
                 </div>
                 <div class="one-half column">
-                    <img  class="chart" src="Example Client.png" />
+                    <img  class="chart" src="images/Example Client.png" />
                 </div>
             </div>
         </div>
@@ -275,6 +317,49 @@
         <li><span class="fqred">Volume:</span> The volume of traffic that the client wishes to buy.</li>
     </ul>
     </div>
+
+    <div class="row" >
+        <h4>Methodology</h4>
+        <p>Our methodology for scoring is based on two factors:</p>
+        <ol>
+            <li>The high-risk patterns we identify by analyzing various device metrics and for each conversion when the Forensiq tag fires or API is called.</li>
+            <li>The visitor's IP address, which we evalate against our Fraud Intelligence Database for high-risk patterns and past fraudulent activity.</li>
+        </ol>
+
+        <h4>Fraud Evaluation Criteria: Conversion Score</h4>
+    <table>
+        <thead class="fqheader">
+            <tr>
+                <th>Risk Ratio</th>
+                <th>Risk Level</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0-64</td>
+                <td class="low">Low</td>
+                <td>High quality impression traffic. Fraudulent activity may be
+                    due to false positives, which is less than 1% in organic traffic
+                    sources.</td>
+            </tr>
+            <tr>
+                <td>65-79</td>
+                <td class="elevated">Suspect</td>
+                <td>Fraudulent activity is not likely. Some fraudulent activity
+                    may occur at the impression level.</td>
+            </tr>
+            <tr>
+                <td>80-100</td>
+                <td class="high">High-Risk</td>
+                <td>Some fraudulent activity is likely, concentrated at the impres-
+                    sion level. Traffic mixing between human and non-human
+                    traffic sources is likely.</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
 
         </div>
         </div>

@@ -40,7 +40,14 @@ temp_vars = {
                'topRange': 'Critical'
     },
     'trafficType': 'Impressions',
+    'implementationTech': 'JS Tag',
     'table_placeHolder': table_placeholder,
+    'input' : {
+        'source': 'Network',
+        'subsource': 'Publisher',
+        'campaign' : 'Campaign ID',
+        'domain': 'Page URL'
+    }
 }
 
 
