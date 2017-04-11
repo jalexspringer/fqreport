@@ -18,7 +18,6 @@
 
         <!-- CSS
         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
         <link rel="stylesheet" href="css/skeleton.css">
 
         <!-- Favicon
@@ -86,7 +85,7 @@
                 <p>Below is a summary of fraud risk by Source sorted descending by total risk. We see several sources with
                     elevated total risk ratio, which represents the percentage of impressions which falls into our total
                     risk range out of the total. The total risk ratio ranges from <span class="fqred" >0.0%</span> to <span class="fqred" >99.98%</span>, which falls into our
-                    <span class="fqred" >Premium</span> and <span class="fqred" >Premium</span> aggregate risk levels respectively. More information on Risk Levels can be found
+                    <span class="fqred" >Premium</span> and <span class="fqred" >Critical</span> aggregate risk levels respectively. More information on Risk Levels can be found
                     in the next section.</p>
             </div>
             <div class="row" >
@@ -118,123 +117,6 @@
 
 
             <!-- Methodologies and Optimization Recommendations -->
-            <div class="row" >
-                <p>Impressions which score in the high-risk range are associated with non-human traffic through inconsistencies
-                    seen in the visitors behavior and device characteristics. For increased insight into scoring methodologies
-                    Forensiq provides five Reason Codes, defined below:</p>
-            </div>
-            <div class="row" >
-                <table>
-                    <thead class="fqheader">
-                        <tr>
-                            <th>Reason Code</th>
-                            <th>Definition</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Spoofed</td>
-                            <td>The user’s device and browser were manipulated to resemble a different
-                                device or browser. This technique is commonly used to produce a real-life
-                                distribution of traffic and simulate traffic from multiple visitors.</td>
-                        </tr>
-                        <tr>
-                            <td>IP Reputation</td>
-                            <td>The IP address was historically associated with high-risk characteristics like
-                                spoofing and other patterns that correspond to proxy and botnet activity.
-                                </td>
-                        </tr>
-                        <tr>
-                            <td>Hosting Provider</td>
-                            <td>An IP belongs to a hosting provider’s range. Unlike regular Internet Service
-                                Providers (e.g. T-Mobile, Verizon), when a visit is generated from a hosting
-                                provider’s IP, it is most often associated with automated, non-human traffic.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Proxy</td>
-                            <td>The IP address is a known proxy.</td>
-                        </tr>
-                        <tr>
-                            <td>Automated Traffic</td>
-                            <td>Identifies malicious botnet activity flagged on the user level through real-time
-                                traffic pattern analysis.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="row" >
-                <p>Campaign optimization can be done at the Source, Sub Source, and Domain levels. The below table
-                    provides groups the Total Risk Ratio into seven distinct Risk Levels and can be used to build blacklists.</p>
-            </div>
-            <div class="row" >
-                <table>
-                    <thead class="fqheader">
-                        <tr>
-                            <th>Risk Ratio</th>
-                            <th>Risk Level</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>< 2%</td>
-                            <td class="premium">Premium</td>
-                            <td>High quality impression traffic. Fraudulent activity may be
-                                due to false positives, which is less than 1% in organic traffic
-                                sources.</td>
-                        </tr>
-                        <tr>
-                            <td>2% - 5%</td>
-                            <td class="low">Low</td>
-                            <td>Fraudulent activity is not likely. Some fraudulent activity
-                                may occur at the impression level.</td>
-                        </tr>
-                        <tr>
-                            <td>6% - 10%</td>
-                            <td class="moderate">Moderate</td>
-                            <td>Some fraudulent activity is likely, concentrated at the impres-
-                                sion level. Traffic mixing between human and non-human
-                                traffic sources is likely.</td>
-                        </tr>
-                        <tr>
-                            <td>11% - 15%</td>
-                            <td class="elevated">Elevated</td>
-                            <td>Fraudulent activity is likely, some concentrated at the impres-
-                                sion level. Traffic mixing between human and non-human
-                                traffic sources is highly likely.</td>
-                        </tr>
-                        <tr>
-                            <td>16% - 20%</td>
-                            <td class="el-high" style="white-space:nowrap">Elevated-High</td>
-                            <td>Fraudulent activity is likely to affect the entire source. Traffic
-                                mixing between human and non-human traffic sources is highly
-                                likely.</td>
-                        </tr>
-                        <tr>
-                            <td>20% - 26%</td>
-                            <td class="high">High</td>
-                            <td>Fraudulent activity is likely to affect the entire source. Traffic
-                                mixing between human and non-human traffic sources is highly
-                                likely.</td>
-                        </tr>
-                        <tr>
-                            <td>26% - 100%</td>
-                            <td class="critical">Critical</td>
-                            <td>It is not recommended to buy from sources with fraud levels
-                                within this threshold.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p>This guide should be considered in combination with the following to create custom blacklists for each
-                    Campaign:</p>
-                <ul>
-                    <li><span class="fqred">Risk Tolerance for Fraud:</span> How much fraud the client is potentially willing to accept
-                    have no tolerance while others may have less stringent requirements.</li>
-                    <li><span class="fqred">Price Points:</span> The CPMs the client wants to remain within.</li>
-                    <li><span class="fqred">Volume:</span> The volume of traffic that the client wishes to buy.</li>
-                </ul>
-            </div>
             <div class="row" >
                 <h4>Risk by source and domain</h4>
                 <p>Grouping the data by <span class="fqred" >domain</span> we are able to identify several sources responsible for this fraud - below are
@@ -270,6 +152,131 @@
             </div>
 
             </div>
+        </div>
+<!-- Appendix goes here -->
+        <div class="row" >
+            <h3>Appendix</h3>
+            
+
+    <div class="row" >
+    <p>Impressions which score in the high-risk range are associated with non-human traffic through inconsistencies
+        seen in the visitors behavior and device characteristics. For increased insight into scoring methodologies
+        Forensiq provides five Reason Codes, defined below:</p>
+    </div>
+    <div class="row" >
+    <table>
+        <thead class="fqheader">
+            <tr>
+                <th>Reason Code</th>
+                <th>Definition</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Spoofed</td>
+                <td>The user’s device and browser were manipulated to resemble a different
+                    device or browser. This technique is commonly used to produce a real-life
+                    distribution of traffic and simulate traffic from multiple visitors.</td>
+            </tr>
+            <tr>
+                <td>IP Reputation</td>
+                <td>The IP address was historically associated with high-risk characteristics like
+                    spoofing and other patterns that correspond to proxy and botnet activity.
+                    </td>
+            </tr>
+            <tr>
+                <td>Hosting Provider</td>
+                <td>An IP belongs to a hosting provider’s range. Unlike regular Internet Service
+                    Providers (e.g. T-Mobile, Verizon), when a visit is generated from a hosting
+                    provider’s IP, it is most often associated with automated, non-human traffic.
+                </td>
+            </tr>
+            <tr>
+                <td>Proxy</td>
+                <td>The IP address is a known proxy.</td>
+            </tr>
+            <tr>
+                <td>Automated Traffic</td>
+                <td>Identifies malicious botnet activity flagged on the user level through real-time
+                    traffic pattern analysis.</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <div class="row" >
+    <p>Campaign optimization can be done at the Source, Sub Source, and Domain levels. The below table
+        provides groups the Total Risk Ratio into seven distinct Risk Levels and can be used to build blacklists.</p>
+    </div>
+    <div class="row" >
+    <table>
+        <thead class="fqheader">
+            <tr>
+                <th>Risk Ratio</th>
+                <th>Risk Level</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>< 2%</td>
+                <td class="premium">Premium</td>
+                <td>High quality impression traffic. Fraudulent activity may be
+                    due to false positives, which is less than 1% in organic traffic
+                    sources.</td>
+            </tr>
+            <tr>
+                <td>2% - 5%</td>
+                <td class="low">Low</td>
+                <td>Fraudulent activity is not likely. Some fraudulent activity
+                    may occur at the impression level.</td>
+            </tr>
+            <tr>
+                <td>6% - 10%</td>
+                <td class="moderate">Moderate</td>
+                <td>Some fraudulent activity is likely, concentrated at the impres-
+                    sion level. Traffic mixing between human and non-human
+                    traffic sources is likely.</td>
+            </tr>
+            <tr>
+                <td>11% - 15%</td>
+                <td class="elevated">Elevated</td>
+                <td>Fraudulent activity is likely, some concentrated at the impres-
+                    sion level. Traffic mixing between human and non-human
+                    traffic sources is highly likely.</td>
+            </tr>
+            <tr>
+                <td>16% - 20%</td>
+                <td class="el-high" style="white-space:nowrap">Elevated-High</td>
+                <td>Fraudulent activity is likely to affect the entire source. Traffic
+                    mixing between human and non-human traffic sources is highly
+                    likely.</td>
+            </tr>
+            <tr>
+                <td>20% - 26%</td>
+                <td class="high">High</td>
+                <td>Fraudulent activity is likely to affect the entire source. Traffic
+                    mixing between human and non-human traffic sources is highly
+                    likely.</td>
+            </tr>
+            <tr>
+                <td>26% - 100%</td>
+                <td class="critical">Critical</td>
+                <td>It is not recommended to buy from sources with fraud levels
+                    within this threshold.</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>This guide should be considered in combination with the following to create custom blacklists for each
+        Campaign:</p>
+    <ul>
+        <li><span class="fqred">Risk Tolerance for Fraud:</span> How much fraud the client is potentially willing to accept
+        have no tolerance while others may have less stringent requirements.</li>
+        <li><span class="fqred">Price Points:</span> The CPMs the client wants to remain within.</li>
+        <li><span class="fqred">Volume:</span> The volume of traffic that the client wishes to buy.</li>
+    </ul>
+    </div>
+
+        </div>
         </div>
     </body>
 </html>
