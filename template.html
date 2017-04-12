@@ -28,7 +28,7 @@
     <body>
         <div class="container" >
             <div class="row" style="page-break-before:always;">
-                 {% include 'templates/intro.html' %}
+                {% include 'templates/header.html' %}
 
             <!-- Intro Modules -->
                 {% include 'templates/ivt/intro.html' %}
@@ -55,20 +55,19 @@
                 {% include 'templates/view/source.html' %}
                 {% include 'templates/view/subsource.html' %}
                 {% include 'templates/view/campaign.html' %}
-                {% include 'templates/view/domain.html' %}
                 {% include 'templates/view/appendix.html' %}
+                {% include 'templates/view/hidden.html' %}
+                {% include 'templates/view/vs_fraud.html' %}
                 {% include 'templates/view/deepdive.html' %}
             </div>
 
         <!-- True URL Modules -->
             <div class="row" style="page-break-before:always;">
                 {% include 'templates/true/overview.html' %}
-                {% include 'templates/true/distribution.html' %}
+                {% include 'templates/true/appendix.html' %}
                 {% include 'templates/true/source.html' %}
                 {% include 'templates/true/subsource.html' %}
-                {% include 'templates/true/campaign.html' %}
-                {% include 'templates/true/domain.html' %}
-                {% include 'templates/true/appendix.html' %}
+                {% include 'templates/true/reasons.html' %}
                 {% include 'templates/true/deepdive.html' %}
             </div>
 

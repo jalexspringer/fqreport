@@ -33,7 +33,9 @@ temp_vars = {
     'client':'Example Client',
     'totalTraffic': 123000000,
     'percentages': {
-        'total': 25.25
+        'total': 25.25,
+        'true': 9.13,
+        'view': 54.65
     },
     'source': {'bottom': 0.00,
                'bottomRange': 'Premium',

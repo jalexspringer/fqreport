@@ -1,8 +1,8 @@
-{% block ivt_source %}
+{% block view_hidden %}
 
 <div class="row" >
-    <h3>Risk by Traffic Source</h3>
-    <p>Below are the top traffic sources with Risk %s in the High and Critical Risk Ranges that are still active as of this analysis.</p>
+    <h3>High Hidden Risk vs. Low Hidden Risk</h3>
+    <p>As mentioned above low Viewable % could be due to either poor quality site layout or malicious hiding of ads. Below are sites with Viewable %s in the critical range with varying Hidden %s.</p>
 </div>
 
 {{ table_placeHolder }}
@@ -21,5 +21,5 @@
             </tr>
         </tbody>
     </table>
-</div>
+</dev>
 {% endblock %}
