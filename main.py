@@ -53,6 +53,8 @@ temp_vars = {
     },
     'startDate': '1/24/2017',
     'endDate': '3/24/2017',
+    'diveInput': 'Sub Source',
+    'diveFocus': 'Example Publisher',
 }
 
 
