@@ -741,7 +741,7 @@ td {
 th:first-child,
 td:first-child {
     padding-left: 2;
-    background-color: #F08080;
+    /* background-color: #F08080; */
 }
 
 th:last-child,
@@ -816,13 +816,17 @@ hr {
 /* Unique attributes */
 .fqred {
     color: #FF0000;
-    font-weight: 700;
+    font-weight: 550;
 }
+
 .chart {
     width: 350px;
 }
+
 .logo {
 }
+
+.tab { margin-left: 40px; margin-right: 40px;}
 
 /* Gradients */
 .premium {background-color: #33ff00; font-weight: 900;}

@@ -27,27 +27,50 @@
     </head>
     <body>
         <div class="container" >
-            {% include 'templates/intro.html' %}
+            <div class="row" style="page-break-before:always;">
+                 {% include 'templates/intro.html' %}
 
-                <h3><b>Fraud Analysis</b></h3>
-                <h4>Overview</h4>
-                <p> We identified a total of <span class="fqred">{{ percentages.total }}</span> of all traffic as fraudulent. Scores in the high-risk or suspect ranges have been linked to lower quality traffic and can often be traced to fraudulent sources, sub sources, or domains.</p>
+            <!-- Intro Modules -->
+                {% include 'templates/ivt/intro.html' %}
+                {% include 'templates/view/intro.html' %}
+                {% include 'templates/true/intro.html' %}
             </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="one-half column">
-                    <img class="chart" src="images/{{ client }}Gauge.png" />
-                </div>
-                <div class="one-half column">
-                    <img  class="chart" src="images/{{ client }}.png" />
-                </div>
+
+        <!-- IVT Modules -->
+            <div class="row" style="page-break-before:always;">
+                {% include 'templates/ivt/overview.html' %}
+                {% include 'templates/ivt/distribution.html' %}
+                {% include 'templates/ivt/source.html' %}
+                {% include 'templates/ivt/subsource.html' %}
+                {% include 'templates/ivt/campaign.html' %}
+                {% include 'templates/ivt/domain.html' %}
+                {% include 'templates/ivt/appendix.html' %}
+                {% include 'templates/ivt/deepdive.html' %}
             </div>
-        </div>
-        <div class="container" >
-            <div class="row" >
-                <p>Below is the breakdown by {{ traffictype }} within each risk range.</p>
-            {{ table_placeHolder }}
+
+        <!-- Viewability Modules -->
+            <div class="row" style="page-break-before:always;">
+                {% include 'templates/view/overview.html' %}
+                {% include 'templates/view/distribution.html' %}
+                {% include 'templates/view/source.html' %}
+                {% include 'templates/view/subsource.html' %}
+                {% include 'templates/view/campaign.html' %}
+                {% include 'templates/view/domain.html' %}
+                {% include 'templates/view/appendix.html' %}
+                {% include 'templates/view/deepdive.html' %}
+            </div>
+
+        <!-- True URL Modules -->
+            <div class="row" style="page-break-before:always;">
+                {% include 'templates/true/overview.html' %}
+                {% include 'templates/true/distribution.html' %}
+                {% include 'templates/true/source.html' %}
+                {% include 'templates/true/subsource.html' %}
+                {% include 'templates/true/campaign.html' %}
+                {% include 'templates/true/domain.html' %}
+                {% include 'templates/true/appendix.html' %}
+                {% include 'templates/true/deepdive.html' %}
+            </div>
 
 <!-- Risk by source chart -->
             <div class="row" >

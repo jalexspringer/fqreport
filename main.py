@@ -31,6 +31,7 @@ table_placeholder = """<div class="row" >
 """
 temp_vars = {
     'client':'Example Client',
+    'totalTraffic': 123000000,
     'percentages': {
         'total': 25.25
     },
@@ -47,7 +48,9 @@ temp_vars = {
         'subsource': 'Publisher',
         'campaign' : 'Campaign ID',
         'domain': 'Page URL'
-    }
+    },
+    'startDate': '1/24/2017',
+    'endDate': '3/24/2017',
 }
 
 

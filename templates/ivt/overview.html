@@ -1,0 +1,35 @@
+{% block intro %}
+
+<br />
+<br />
+<br />
+<br />
+<div class="row" >
+    <h3>Invalid Traffic Analysis</h3>
+    <h4 class="fqred"><i>Overview</i></h4>
+    <p>Overall <span class="fqred">{{ percentages.total }}</span> of {{ trafficType }} fell into the Forensiq Total Risk Range between {{ startDate }} and {{ endDate }}. Scores in the high-risk or suspect ranges have been linked to lower quality traffic and can often be traced to fraudulent sources, sub sources, or domains/apps.</p>
+</div>
+
+<div class="row">
+    <img  class="chart" src="images/{{ client }}.png" />
+</div>
+
+<div class="row" >
+    <p>{{ totalTraffic }} {{ trafficType }} scored in Forensiq’s Total Risk Range in the period studied for this analysis.</p>
+    {{ table_placeHolder }}
+    <table>
+        <thead class="fqheader">
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</dev>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% block intro %}
+
+<br />
+<br />
+<br />
+<br />
+<div class="row" >
+    <h3>Viewability Analysis</h3>
+    <h4 class="fqred"><i>Overview</i></h4>
+    <p>Overall <span class="fqred">{{ percentages.total }}</span> Viewable Measured Impressions fell into the Forensiq Total Risk Range between {{ startDate }} and {{ endDate }}.</p>
+</div>
+
+<div class="row">
+    <img  class="chart" src="images/{{ client }}.png" />
+</div>
+
+<div class="row" >
+    <p>Forensiq defines Viewability per the MRC standard of 50% of the ad in-view for 1 continuous second for display inventory and 2 continuous seconds for video inventory. Forensiq offers two products as part of its Viewability offering:</p>
+    <ul class="tab">
+        <li><span class="'fqred" >Viewability Detection:</span> measures whether 50% of the ad is in-view continuously at the following intervals:
+            <ul>
+                <li><span class="fqred" >Display:</span> 1s, 5s, 10s, 30s</li>
+                <li><span class="fqred" >Video:</span> 2s, 5s, 10s</li>
+            </ul>
+        </li>
+        <li><span class="'fqred" >Hidden Ad Detection:</span> ads hidden from view by having been placed behind other ads, in a background browser window or positioned in a way in which the user could not have seen the ad.</li>
+    </ul>
+    {{ table_placeHolder }}
+    <table>
+        <thead class="fqheader">
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</dev>
+{% endblock %}
